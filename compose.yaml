@@ -5,4 +5,14 @@ services:
       - '5000:5000'
   
   triton:
-    image: nvcr.io/nvidia/tritonserver:22.12-py3
+    build: triton
+    volumes:
+      - ./triton/model_repository:/models
+
+      # deploy:
+      #   resources:
+      #     reservations:
+      #       devices:
+      #         - driver: nvidia
+      #           count: 1
+      #           capabilities: [gpu]
