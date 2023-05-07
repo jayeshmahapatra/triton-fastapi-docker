@@ -1,0 +1,8 @@
+services:
+  fastapi:
+    build: app
+    ports:
+      - '5000:5000'
+  
+  triton:
+    image: nvcr.io/nvidia/tritonserver:22.12-py3
