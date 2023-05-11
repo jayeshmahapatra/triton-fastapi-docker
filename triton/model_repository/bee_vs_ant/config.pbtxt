@@ -1,0 +1,18 @@
+name: "bee_vs_ant"
+platform: "pytorch_libtorch"
+max_batch_size: 1
+
+input[
+{
+    name: "INPUT__0"
+    data_type:  TYPE_FP32
+    dims: [3,224,224]
+}
+]
+output:[
+{
+    name: "OUTPUT__0"
+    data_type:  TYPE_FP32
+    dims: [2]
+}
+]
