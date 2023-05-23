@@ -21,4 +21,3 @@ class AnimalType(str, Enum):
 class ClassificationResult(BaseModel):
     prediction: AnimalType = Field(...,title="Classification Result", example = "bee")
 
-

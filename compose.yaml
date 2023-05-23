@@ -8,6 +8,13 @@ services:
     build: triton
     volumes:
       - ./triton/model_repository:/models
+    ports:
+      - '8001:8001'
+  
+  gradio:
+    build: gradio
+    ports:
+      - '8080:8080'
 
       # deploy:
       #   resources:

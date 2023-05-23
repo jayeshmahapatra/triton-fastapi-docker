@@ -1,3 +1,5 @@
+tritonclient
+tritonclient[grpc]
 fastapi
 pydantic
 uvicorn[standard]

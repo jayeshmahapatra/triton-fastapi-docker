@@ -3,10 +3,7 @@ FROM python:3.8.16-slim-buster
 # set work directory
 WORKDIR /app
 
-#Required pip libs
-RUN pip install tritonclient tritonclient[grpc]
-
-#Install requirements for flask app
+#Install requirements
 ADD ./requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
 
