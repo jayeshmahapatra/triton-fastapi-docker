@@ -10,6 +10,10 @@ from schema import ClassificationRequest, ClassificationResult
 #Numpy
 import numpy as np
 
+#Utils
+from utils import decode_img_to_numpy
+import sys
+
 app = FastAPI()
 
 async def test_infer(triton_client,
@@ -33,13 +37,16 @@ async def test_infer(triton_client,
     return results
 
 
+
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
 
 @app.get("/predict", response_model=ClassificationResult)
 async def predict(data: ClassificationRequest) -> ClassificationResult:
-    img = np.random.rand(1,3,224,224).astype(np.float32)
+
+    img = decode_img_to_numpy(data.base64_image, data.height, data.width)
+    #img = np.random.rand(1,3,224,224).astype(np.float32)
     triton_client = grpcclient.InferenceServerClient(url= "triton:8001")
     triton_out = await test_infer(triton_client, model_name= "bee_vs_ant", input_data= img,
                                 input_node = "INPUT__0", output_node = "OUTPUT__0")
@@ -47,6 +54,6 @@ async def predict(data: ClassificationRequest) -> ClassificationResult:
 
     result = {}
     
-    result['prediction'] = "bee" if logits.argmax() == 1 else "ant"
+    result['prediction'] = "bee" if logits[0].argmax() == 1 else "ant"
 
     return result

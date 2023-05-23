@@ -5,3 +5,4 @@ pydantic
 uvicorn[standard]
 gunicorn
 numpy
+opencv-python-headless

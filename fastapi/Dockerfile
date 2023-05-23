@@ -11,4 +11,5 @@ COPY ./main.py /app/main.py
 
 COPY . ./
 
-CMD ["gunicorn", "main:app", "--bind", "0.0.0.0:5000", "--workers", "4", "--worker-class", "uvicorn.workers.UvicornWorker"]
+#CMD ["gunicorn", "main:app", "--bind", "0.0.0.0:5000", "--workers", "4", "--worker-class", "uvicorn.workers.UvicornWorker"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]
