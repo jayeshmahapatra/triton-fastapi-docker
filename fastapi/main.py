@@ -12,7 +12,6 @@ import numpy as np
 
 #Utils
 from utils import decode_img_to_numpy
-import sys
 
 app = FastAPI()
 
@@ -51,7 +50,6 @@ async def predict(data: ClassificationRequest) -> ClassificationResult:
     triton_out = await test_infer(triton_client, model_name= "bee_vs_ant", input_data= img,
                                 input_node = "INPUT__0", output_node = "OUTPUT__0")
     logits = triton_out.as_numpy("OUTPUT__0")
-
     result = {}
     
     result['prediction'] = "bee" if logits[0].argmax() == 1 else "ant"

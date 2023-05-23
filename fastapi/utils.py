@@ -51,7 +51,8 @@ def decode_img_to_numpy(base64_img: str, height: int, width: int):
     img = img.astype(np.float32)
 
     #Model expects channels first. Changing image to be in format [N,C,H,W]
-    img = img.reshape(1, 3, height, width)
+    img = img.reshape(1, height, width, 3)
+    img = img.transpose(0,3,1,2)
 
     #Normalizing. The per channel mean and std are derived from train set
     # in actual production setting, should be derived from the test set dynamically
