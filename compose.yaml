@@ -1,6 +1,6 @@
 services:
   fastapi:
-    build: app
+    build: fastapi
     ports:
       - '5000:5000'
   
