@@ -160,4 +160,3 @@ cython_debug/
 #.idea/
 
 data
-triton/model_repository/bee_vs_ant/1/model.pt
