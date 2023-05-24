@@ -1,16 +1,16 @@
-#fastapi
+# fastapi
 from fastapi import FastAPI
 
-#triton client
+# triton client
 import tritonclient.grpc.aio as grpcclient
 
-#Pydantic Schemas
+# Pydantic Schemas
 from schema import ClassificationRequest, ClassificationResult
 
-#Numpy
+# Numpy
 import numpy as np
 
-#Utils
+# Utils
 from utils import decode_img_to_numpy
 
 app = FastAPI()
@@ -45,7 +45,6 @@ async def root():
 async def predict(data: ClassificationRequest) -> ClassificationResult:
 
     img = decode_img_to_numpy(data.base64_image, data.height, data.width)
-    #img = np.random.rand(1,3,224,224).astype(np.float32)
     triton_client = grpcclient.InferenceServerClient(url= "triton:8001")
     triton_out = await test_infer(triton_client, model_name= "bee_vs_ant", input_data= img,
                                 input_node = "INPUT__0", output_node = "OUTPUT__0")
