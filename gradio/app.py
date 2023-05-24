@@ -8,29 +8,47 @@ def encode_img_base64(image: np.ndarray) -> str:
     """Decode byte image with base64 to np.ndarray."""
     return base64.b64encode(image.tobytes()).decode("utf8")
 
-def classify_image(img) -> str:
+def classify_image(img: np.ndarray) -> str:
+    """
+    Classifies an image as either an 'ant' or a 'bee' using a FastAPI server.
+
+    Args:
+        img (np.ndarray): The image to be classified.
+
+    Returns:
+        str: The name of the insect ('ant' or 'bee').
+    """
+
+    # Reshape the image to the desired dimensions
     img = img.reshape((-1, 224, 224, 3))
 
-    #base64 encode image
+    # Base64 encode the image
     base64_img = encode_img_base64(img)
 
-    #Height and Width are fixed
+    # Define the fixed height and width of the image
     height = 224
     width = 224
 
+    # Set the URL and route for the FastAPI server
     url = 'http://fastapi:5000'
     route = '/predict'
     
-    #Send a get request to fastapi server
+    # Prepare the parameters for the request
     params = {'base64_image': base64_img,  
     'height': height,
     'width': width}
 
     try:
+        # Send a GET request to the FastAPI server with the image data
         response = requests.get(url + route, json= params, timeout=120)
+        
+        # Get the JSON response from the server
         response = response.json()
+
+        # Extract the insect name from the response
         insect_name = str(response)
     except Exception as ex:
+        # Return an error message if an exception occurs
         return "Exception: " + str(ex)
 
     
