@@ -43,7 +43,7 @@ To get started, follow these steps:
 
    This command will start all three services: `triton`, `fastapi`, and `gradio`.
 
-4. Once the services are up and running, you can access the Gradio interface by visiting `localhost:7860` in your web browser. The interface allows you to upload images and receive predictions on whether they contain bees or ants.
+4. Once the services are up and running, you can access the Gradio interface by visiting `localhost:8080` in your web browser. The interface allows you to upload images and receive predictions on whether they contain bees or ants.
 
 ## Notebooks
 
