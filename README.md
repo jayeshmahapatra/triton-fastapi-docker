@@ -51,4 +51,4 @@ Contributions are welcome! If you have any suggestions, bug fixes, or improvemen
 
 ## License
 
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+This repository is licensed under the MIT License, except the contents of the **notebooks** folder which are licensed using BSD 3-Clause License. See the [LICENSE](LICENSE) file for more information.
