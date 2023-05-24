@@ -2,6 +2,12 @@
 
 This repository demonstrates how to use NVIDIA Triton to deploy and serve ML models. It provides a set of services packaged in Docker containers that work together to serve a model capable of distinguishing between bees and ants.
 
+## Prerequisites
+
+Before getting started, ensure that you have the following prerequisites:
+
+- Docker: You need to have Docker installed on your system to run the services. You can download and install Docker from the official Docker website: [https://www.docker.com/get-docker](https://www.docker.com/get-docker)
+
 ## Services
 
 ### 1. triton
