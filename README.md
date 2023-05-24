@@ -30,20 +30,18 @@ To get started, follow these steps:
    cd triton-fastapi-docker
    ```
 
-3. If you already have an ML model, you can place it in the `triton/model_repository/bee_vs_ant/` directory. Alternatively, you can download a pre-trained model from [this link](https://getmodel.com) and place it in the same directory.
-
-4. Build and start the services using Docker Compose:
+3. Build and start the services using Docker Compose:
    ```bash
    docker-compose up --build
    ```
 
    This command will start all three services: `triton`, `fastapi`, and `gradio`.
 
-5. Once the services are up and running, you can access the Gradio interface by visiting `localhost:7860` in your web browser. The interface allows you to upload images and receive predictions on whether they contain bees or ants.
+4. Once the services are up and running, you can access the Gradio interface by visiting `localhost:7860` in your web browser. The interface allows you to upload images and receive predictions on whether they contain bees or ants.
 
 ## Notebooks
 
-The `notebooks` directory contains a Jupyter notebook that guides you through the process of creating a TorchScript model. This model can be deployed using Triton for serving predictions. If you want to create your own model, follow the instructions provided in the notebook.
+The `notebooks` directory contains a Jupyter notebook that guides you through the process of creating a TorchScript model to distinguish between bee_vs_ant. It was used to create the model served by the triton service. If you want to train your own model, you can look at the notebook for reference.
 
 ## Contributing
 
