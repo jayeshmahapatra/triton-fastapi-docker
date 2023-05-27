@@ -1,6 +1,6 @@
 # Triton Service
 
-This is the readme for the Triton service. The Triton service is part of the triton-fastapi-docker repository and is responsible for running the NVIDIA Triton inference engine to serve machine learning models. It utilizes the Triton Docker image from `nvcr.io/nvidia/tritonserver:22.12-py3`.
+The Triton service is part of the triton-fastapi-docker repository and is responsible for running the NVIDIA Triton inference engine to serve machine learning models. It utilizes the Triton Docker image from `nvcr.io/nvidia/tritonserver:22.12-py3`.
 
 ## Folder Structure
 

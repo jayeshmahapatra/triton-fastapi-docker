@@ -1,6 +1,6 @@
 # Gradio Service
 
-This is the readme for the Gradio service. The Gradio service provides a user-friendly interface using Gradio, allowing users to perform machine learning inference by uploading images. This service communicates with the FastAPI service to request inferences for the uploaded images.
+The Gradio service provides a user-friendly interface using Gradio, allowing users to perform machine learning inference by uploading images. This service communicates with the FastAPI service to request inferences for the uploaded images.
 
 For instructions on running the Gradio service and the entire application, please refer to the [root readme](../README.md) of this repository.
 

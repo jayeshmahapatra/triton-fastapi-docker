@@ -1,6 +1,6 @@
 # FastAPI Service
 
-This is the readme for the FastAPI service. The FastAPI service is responsible for running the Python backend that communicates with the Triton service using gRPC. It acts as an intermediary between the client and the Triton service. The FastAPI service receives REST API requests, processes them, and sends the predictions back to the client.
+The FastAPI service is responsible for running the Python backend that communicates with the Triton service using gRPC. It acts as an intermediary between the client and the Triton service. The FastAPI service receives REST API requests, processes them, and sends the predictions back to the client.
 
 For instructions on running the FastAPI service and the entire application, please refer to the [root readme](../README.md) of this repository.
 
