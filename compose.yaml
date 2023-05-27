@@ -10,16 +10,16 @@ services:
       - ./triton/model_repository:/models
     ports:
       - '8001:8001'
-  
-  gradio:
-    build: gradio
-    ports:
-      - '8080:8080'
-
-      # deploy:
+    
+    # deploy:
       #   resources:
       #     reservations:
       #       devices:
       #         - driver: nvidia
       #           count: 1
       #           capabilities: [gpu]
+  
+  gradio:
+    build: gradio
+    ports:
+      - '8080:8080'
