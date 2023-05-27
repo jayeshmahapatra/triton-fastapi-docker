@@ -59,7 +59,7 @@ def classify_image(img: np.ndarray) -> str:
 interface = gr.Interface(fn=classify_image, 
              inputs=gr.Image(shape=(224, 224)),
              outputs=["text"],
-             examples=["ant.jpg", "bee.jpg"]
+             examples=["example_images/ant.jpg", "example_images/bee.jpg"]
              )
 
 interface.launch(server_name="0.0.0.0", server_port=8080)
