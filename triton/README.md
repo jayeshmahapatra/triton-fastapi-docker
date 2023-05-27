@@ -46,4 +46,4 @@ Within the version folder, the actual model files are stored. These model files 
 
 ## Usage
 
-To use the Triton service, follow the instructions in the main repository's readme: [triton-fastapi-docker](https://github.com/jayeshmahapatra/triton-fastapi-docker).
+To use the Triton service, follow the instructions in the main repository's [readme](../README.md).
