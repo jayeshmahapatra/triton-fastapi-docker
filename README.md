@@ -45,9 +45,13 @@ To get started, follow these steps:
 
 4. Once the services are up and running, you can access the Gradio interface by visiting `localhost:8080` in your web browser. The interface allows you to upload images and receive predictions on whether they contain bees or ants.
 
-## Notebooks
+## Notebooks and data
 
 The `notebooks` directory contains a Jupyter notebook that guides you through the process of creating a TorchScript model to distinguish between bee_vs_ant. It was used to create the model served by the triton service. If you want to train your own model, you can look at the notebook for reference.
+
+The `data` directory can be used to keep training data, when using notebooks to train.
+
+For exact instructions refer to the [readme](./notebooks/README.md) in the `notebooks` folder.
 
 ## Contributing
 
