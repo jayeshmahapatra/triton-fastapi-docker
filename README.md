@@ -10,15 +10,15 @@ Before getting started, ensure that you have the following prerequisites:
 
 ## Services
 
-### 1. triton
+### 1. [triton](./triton/)
 
 The `triton` service runs the NVIDIA Triton inference engine and serves the ML model. It is responsible for handling the inference requests and providing predictions based on the input data.
 
-### 2. fastapi
+### 2. [fastapi](./fastapi/)
 
 The `fastapi` service is a Python backend that communicates with the `triton` service using gRPC. It acts as an intermediary between the client and the `triton` service. Clients can send REST API requests to this service to predict whether an image contains a bee or an ant.
 
-### 3. gradio
+### 3. [gradio](./gradio/)
 
 The `gradio` service provides a user-friendly interface using Gradio, which allows users to perform ML inference by uploading images. This interface sends API requests to the `fastapi` service for ML inference, which in turn communicates with the `triton` server to obtain the predictions.
 
