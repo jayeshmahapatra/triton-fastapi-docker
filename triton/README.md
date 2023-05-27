@@ -22,7 +22,10 @@ triton/
 
 ## Model Configuration
 
-Within each model folder in the `model_repository`, there is a `config.pbtxt` file that contains the configuration details for the model. It specifies information such as the input and output tensor shapes, whether the model runs on CPU or GPU, and the number of parallel instances of the model to load.
+Within each model folder in the `model_repository`, there is a `config.pbtxt` file that contains the configuration details for the model. It specifies information like:
+- The input and output tensor shapes
+- Whether the model runs on CPU or GPU 
+- The number of parallel instances of the model to load.
 
 The file path for the model configuration is as follows:
 
@@ -44,4 +47,3 @@ Within the version folder, the actual model files are stored. These model files 
 ## Usage
 
 To use the Triton service, follow the instructions in the main repository's readme: [triton-fastapi-docker](https://github.com/jayeshmahapatra/triton-fastapi-docker).
-
