@@ -2,7 +2,7 @@
 
 This repository demonstrates how to use NVIDIA Triton to deploy and serve ML models. It provides a set of services packaged in Docker containers that work together to serve a model capable of distinguishing between bees and ants.
 
-This is the companion repository to my blog: **[Beyond FastAPI: Using Nvidia Triton for serving ML models](https://jayeshmahapatra.github.io/2023/05/28/triton.html)**
+This is the companion repository to my blog: **[Beyond FastAPI: Using Nvidia Triton for serving ML models](https://jayeshmahapatra.github.io/blog/2023-05-28-triton)**
 
 ## Prerequisites
 
